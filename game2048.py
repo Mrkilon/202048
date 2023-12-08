@@ -1,12 +1,14 @@
-
 import pygame
 import random
 import copy
+import subprocess
+import cfgs
+
+
 class Game2048(object):
     def __init__(self, matrix_size=(4, 4), max_score_filepath=None):
         self.matrix_size = matrix_size
         self.max_score_filepath = max_score_filepath
-
         self.initialize()
 
     def initialize(self):

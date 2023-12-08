@@ -5,12 +5,13 @@ pygame.init()
 pygame.quit()
 
 SCREENSIZE = (1580, 930)
-BACKGROUND_IMAGE_PATH = 'resources/5.jpg'
+BACKGROUND_IMAGE_PATH = 'resources/5.png'
 
 background_image = pygame.image.load(BACKGROUND_IMAGE_PATH)
 background_image = pygame.transform.scale(background_image, SCREENSIZE)
 
-BGMPATH = 'resources/shaonian.mp3'
+
+BGMPATHS = 'resources/shaonian.mp3'
 
 FONTPATH = os.path.join(os.getcwd(), 'resources/gabriola.ttf')
 

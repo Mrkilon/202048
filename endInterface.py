@@ -2,22 +2,22 @@ import pygame
 import sys
 
 
-def endInterface(screen, cfg):
+def endInterface(screen, cfgs):
     font_size_big = 80
     font_size_small = 35
     font_color = (255, 255, 255)
-    font_big = pygame.font.Font(cfg.FONTPATH, font_size_big)
-    font_small = pygame.font.Font(cfg.FONTPATH, font_size_small)
+    font_big = pygame.font.Font(cfgs.FONTPATH, font_size_big)
+    font_small = pygame.font.Font(cfgs.FONTPATH, font_size_small)
     surface = screen.convert_alpha()
     surface.fill((0,0,0,2))
     text = font_big.render('Проиграл', True, font_color)
     text_rect = text.get_rect()
-    text_rect.centerx, text_rect.centery = cfg.SCREENSIZE[0] / 2, cfg.SCREENSIZE[1] / 2 - 50
+    text_rect.centerx, text_rect.centery = cfgs.SCREENSIZE[0] / 2, cfgs.SCREENSIZE[1] / 2 - 50
     surface.blit(text, text_rect)
     button_width, button_height = 100, 50
-    button_start_x_left = cfg.SCREENSIZE[0] / 2 - button_width - 30
-    button_start_x_right = cfg.SCREENSIZE[0] / 2 + 20
-    button_start_y = cfg.SCREENSIZE[1] / 2 - button_height / 2 + 30
+    button_start_x_left = cfgs.SCREENSIZE[0] / 2 - button_width - 30
+    button_start_x_right = cfgs.SCREENSIZE[0] / 2 + 20
+    button_start_y = cfgs.SCREENSIZE[1] / 2 - button_height / 2 + 30
     pygame.draw.rect(surface, (128,0,255), (button_start_x_left, button_start_y, button_width, button_height))
     text_restart = font_small.render('Рестарт', True, font_color)
     text_restart_rect = text_restart.get_rect()
